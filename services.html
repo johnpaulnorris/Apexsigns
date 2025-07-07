@@ -5,16 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services | Apex Signs</title>
 <link rel="stylesheet" href="style.css">
-<style>body{font-family:sans-serif;background:#f4f4f4;color:#333;}header{background:#333;color:#fff;padding:1rem;}h1{color:#0078d7;}</style>
+<style>
+/* Full site CSS (v5.1) */
+body { margin:0; font-family:sans-serif; background:#f9f9f9; color:#333; }
+header { background:#1a1a1a; color:#fff; padding:1rem; position:sticky; top:0; }
+nav a { color:#fff; margin:0 1rem; text-decoration:none; }
+h1, h2 { color:#0078d7; }
+.hero { background:#0078d7; color:#fff; padding:3rem; text-align:center; }
+footer { background:#333; color:#fff; text-align:center; padding:1rem; }
+</style>
 </head>
 <body>
-<header><h1>Services</h1></header>
-<main><p>This is the Services page content.</p></main>
-<footer><p>&copy; 2025 Apex Signs and Graphics Ltd.</p></footer>
+<header>
+  <h1>Services</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="vehicle-graphics.html">Vehicle Graphics</a>
+  </nav>
+</header>
+<main>
+  <div class="hero"><h2>Services</h2><p>We provide high-quality signage and vehicle livery services.</p></div>
+</main>
+<footer>&copy; 2025 Apex Signs and Graphics Ltd.</footer>
 <script src="script.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  console.log('v5.0 inline JS loaded');
+// Full site JS (v5.1)
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('v5.1 real JS loaded');
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', function() {
+    header.style.background = window.scrollY > 50 ? '#000' : '#1a1a1a';
+  });
 });
 </script>
 </body>
