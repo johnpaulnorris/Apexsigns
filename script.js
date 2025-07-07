@@ -1,9 +1,9 @@
 
-// Full site JS (v5.1)
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('v5.1 real JS loaded');
-  const header = document.querySelector('header');
-  window.addEventListener('scroll', function() {
-    header.style.background = window.scrollY > 50 ? '#000' : '#1a1a1a';
+// Full site JS (v4.3)
+document.addEventListener('DOMContentLoaded',()=>{
+  console.log('v4.3 real JS loaded');
+  window.addEventListener('scroll',()=>{
+    const header=document.querySelector('header');
+    header.style.background=window.scrollY>50?'#111':'#000';
   });
 });
