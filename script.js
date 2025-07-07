@@ -41,3 +41,17 @@ if (document.querySelector('.gallery')) {
     }
   });
 }
+// === Vehicle Graphics Slider ===
+if (document.querySelector('.vehicle-slider-container')) {
+  const sliderImages = document.querySelectorAll('.vehicle-slider-container img');
+  let current = 0;
+
+  function showNextImage() {
+    sliderImages[current].classList.remove('active');
+    current = (current + 1) % sliderImages.length;
+    sliderImages[current].classList.add('active');
+  }
+
+  sliderImages[0].classList.add('active'); // Start with first image
+  setInterval(showNextImage, 3000); // Change image every 3 seconds
+}
