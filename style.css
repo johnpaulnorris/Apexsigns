@@ -1,1 +1,4 @@
-/* style.css Final Build v4.8 */
+/* style.css v5.0 */
+body { font-family: sans-serif; background: #f4f4f4; color: #333; }
+header { background: #333; color: #fff; padding: 1rem; }
+h1 { color: #0078d7; }
