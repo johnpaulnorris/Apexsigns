@@ -135,6 +135,27 @@ footer {
 .service-card p {
   color: #555;
 }
+/* Vehicle Slider */
+.vehicle-slider-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.vehicle-slider-container img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.vehicle-slider-container img.active {
+  opacity: 1;
+}
 
 /* === Responsive Fixes === */
 @media (max-width: 768px) {
