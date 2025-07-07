@@ -1,1 +1,1 @@
-// script.js Fullscreen Slider Final Build v4.5
+// script.js Final Build v4.6
