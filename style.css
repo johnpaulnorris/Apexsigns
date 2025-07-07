@@ -1,9 +1,9 @@
 
-/* Full site CSS (v4.3) */
-body { margin:0; font-family:Arial, sans-serif; background:#fff; color:#222; }
+/* Full site CSS (v4.2) */
+body { margin:0; font-family:Arial, sans-serif; background:#fff; color:#333; }
 header { background:#000; color:#fff; position:sticky; top:0; padding:1rem; }
 nav a { color:#fff; margin:0 10px; text-decoration:none; }
 .hero { background:#0078d7; color:#fff; padding:50px 20px; text-align:center; }
 .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; padding:20px; }
-.gallery img { width:100%; height:auto; border-radius:8px; cursor:pointer; }
+.gallery img { width:100%; border-radius:8px; cursor:pointer; }
 footer { background:#333; color:#fff; text-align:center; padding:1rem; }
