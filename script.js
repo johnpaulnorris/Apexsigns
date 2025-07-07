@@ -6,43 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// === Lightbox Functionality (gallery.html only) ===
-if (document.querySelector('.gallery')) {
-  const galleryImages = document.querySelectorAll('.gallery img');
-  const lightboxOverlay = document.createElement('div');
-  lightboxOverlay.className = 'lightbox-overlay';
-  lightboxOverlay.innerHTML = `
-    <span class="lightbox-close">&times;</span>
-    <img src="" alt="Lightbox Image">
-  `;
-  document.body.appendChild(lightboxOverlay);
-
-  const lightboxImg = lightboxOverlay.querySelector('img');
-  const closeBtn = lightboxOverlay.querySelector('.lightbox-close');
-
-  galleryImages.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightboxOverlay.classList.add('active');
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightboxOverlay.classList.remove('active');
-  });
-  lightboxOverlay.addEventListener('click', (e) => {
-    if (e.target === lightboxOverlay) {
-      lightboxOverlay.classList.remove('active');
-    }
-  });
-}
-
 // === Vehicle Graphics Slider ===
 if (document.querySelector('.vehicle-slider-container')) {
   const sliderContainer = document.querySelector('.vehicle-slider-container');
-
-  // Load all vehicle images dynamically
-  const totalImages = 212;
+  const totalImages = 212; // Adjust if more images added
   for (let i = 1; i <= totalImages; i++) {
     const img = document.createElement('img');
     img.src = `images/v ${i}.jpg`;
@@ -59,6 +26,6 @@ if (document.querySelector('.vehicle-slider-container')) {
     sliderImages[current].classList.add('active');
   }
 
-  sliderImages[0].classList.add('active'); // Start with first image
+  sliderImages[0].classList.add('active');
   setInterval(showNextImage, 3000); // Change image every 3 seconds
 }
