@@ -1,22 +1,16 @@
-/* === Brand Colours from Facebook Page === */
 :root {
-  --primary-color: #003366; /* Deep Blue */
-  --accent-color: #00AEEF;  /* Bright Cyan */
+  --primary-color: #003366;
+  --accent-color: #00AEEF;
   --text-color: #333;
   --background-color: #fff;
 }
-
-/* === Import Google Font === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* === Base Styles === */
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
   background: var(--background-color);
   color: var(--text-color);
 }
-
 header {
   background: var(--primary-color);
   color: #fff;
@@ -28,28 +22,23 @@ header {
   align-items: center;
   z-index: 1000;
 }
-
 header h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: 600;
 }
-
 nav a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
   font-weight: 500;
 }
-
 nav a.active {
   border-bottom: 2px solid var(--accent-color);
 }
-
 nav a:hover {
   color: var(--accent-color);
 }
-
 .hero {
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   color: #fff;
@@ -57,7 +46,6 @@ nav a:hover {
   text-align: center;
   border-radius: 0 0 12px 12px;
 }
-
 footer {
   background: var(--primary-color);
   color: #fff;
@@ -66,15 +54,12 @@ footer {
   margin-top: 40px;
   font-size: 0.9rem;
 }
-
-/* === Service Cards Grid === */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px;
 }
-
 .service-card {
   background: #f5f5f5;
   border-radius: 8px;
@@ -82,35 +67,28 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
-
 .service-card h2 {
   margin-top: 0;
   color: var(--primary-color);
   transition: color 0.3s ease;
 }
-
 .service-card:hover h2 {
   color: var(--accent-color);
 }
-
 .service-card p {
   color: #555;
   line-height: 1.5;
 }
-
-/* === Vehicle Slider === */
 .vehicle-slider-container {
   position: relative;
   height: 200px;
   overflow: hidden;
   border-radius: 8px;
 }
-
 .vehicle-slider-container img {
   position: absolute;
   top: 0; left: 0;
@@ -120,12 +98,9 @@ footer {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 .vehicle-slider-container img.active {
   opacity: 1;
 }
-
-/* === Call Us Button === */
 .call-btn {
   position: fixed;
   bottom: 20px;
@@ -144,8 +119,6 @@ footer {
   background: var(--primary-color);
   transform: scale(1.05);
 }
-
-/* === Map Container (Contact Page) === */
 .map-container {
   margin: 20px auto;
   max-width: 800px;
@@ -153,8 +126,6 @@ footer {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
-/* === Responsive === */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
