@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// === Vehicle Graphics Slider ===
+// === Vehicle Graphics Slider with Logging ===
 if (document.querySelector('.vehicle-slider-container')) {
   const sliderContainer = document.querySelector('.vehicle-slider-container');
   const totalImages = 212;
@@ -14,15 +14,27 @@ if (document.querySelector('.vehicle-slider-container')) {
     const img = document.createElement('img');
     img.src = `images/v ${i}.jpg`;
     img.alt = `Vehicle Graphic ${i}`;
+    img.onerror = function () {
+      console.error(`❌ Image not found: ${img.src}`);
+    };
+    img.onload = function () {
+      console.log(`✅ Loaded: ${img.src}`);
+    };
     sliderContainer.appendChild(img);
   }
   const sliderImages = sliderContainer.querySelectorAll('img');
   let current = 0;
   function showNextImage() {
-    sliderImages[current].classList.remove('active');
-    current = (current + 1) % sliderImages.length;
-    sliderImages[current].classList.add('active');
+    if (sliderImages.length > 0) {
+      sliderImages[current].classList.remove('active');
+      current = (current + 1) % sliderImages.length;
+      sliderImages[current].classList.add('active');
+    }
   }
-  sliderImages[0].classList.add('active');
-  setInterval(showNextImage, 3000);
+  if (sliderImages.length > 0) {
+    sliderImages[0].classList.add('active');
+    setInterval(showNextImage, 3000);
+  } else {
+    console.warn('⚠ No vehicle images loaded for slider.');
+  }
 }
