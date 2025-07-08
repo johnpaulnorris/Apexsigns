@@ -43,17 +43,20 @@ nav a:hover {
   color: var(--accent-color);
 }
 
-/* Hero section with responsive images */
+/* Hero section with responsive images and max height */
 .hero {
   position: relative;
   text-align: center;
   color: #fff;
+  max-height: 500px; /* Limit hero section height */
+  overflow: hidden;  /* Crop any excess */
 }
 
 .hero img.hero-image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover; /* Fill width without distortion */
 }
 
 .hero-text {
